@@ -1,4 +1,3 @@
-from django.urls import path, include
 from cinema.views import (
     GenreViewSet,
     ActorViewSet,
@@ -23,6 +22,4 @@ router.register(
     basename="movie_session"
 )
 
-urlpatterns = [
-    path("", include(router.urls)),
-]
+urlpatterns = router.urls
